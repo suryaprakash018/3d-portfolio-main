@@ -49,5 +49,6 @@ CI / automatic deploy (recommended)
   2. Create a Vercel personal token: https://vercel.com/account/tokens
   3. In the GitHub repo, go to Settings > Secrets and variables > Actions and add `VERCEL_TOKEN` (value = your Vercel token).
   4. Push to `main` — the workflow will run and call `vercel --prod` using the token.
+- If the workflow fails during install, it now uses `npm ci --legacy-peer-deps` to match your local dependencies.
 
 This lets CI handle the deploy so you don't need to sign in from this machine.
